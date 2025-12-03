@@ -18,11 +18,16 @@ environment.yml: Conda environment specification for reproducibility
 setup_instructions.md: instructions to run the analysis pipeline
 
 Notes on Reproduction
+
 Datasets
+
 Datasets are provided by outside sources, and must be downloaded externally to reproduce results. Three datasets are used in this work: MIMIC-IV version 3.1, MIMIC-IV-Note version 2.2, and the eICU Collaborative Research Database (CRD) version 2.0. The .Rmd script contains the necessary code to prepare the data for analysis.
 
 MIMIC Databases
+
 Data has been download from PhysioNet. Both MIMIC databases (DB) are relational DB structured in tables. Documentation about the DB schema can be found on the MIMIC site. Data access requires Data Use Agreement with PhysioNet.
 
 eICU-CRD
+
 Data has been download from PhysioNet. Documentation about the DB schema can be found on the eICU-CRD site. Data access requires Data Use Agreement with PhysioNet.
+
