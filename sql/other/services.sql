@@ -2,7 +2,7 @@ SET search_path TO mimiciv_hosp;
 -- services.sql
 -- Service changes during stay
 
-CREATE TABLE services AS
+CREATE OR REPLACE TABLE services AS
 SELECT
     subject_id,
     hadm_id,

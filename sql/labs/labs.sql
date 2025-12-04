@@ -2,7 +2,7 @@ SET search_path TO mimiciv_hosp;
 -- labs.sql
 -- Extract lab events
 
-CREATE TABLE labs AS
+CREATE OR REPLACE TABLE labs AS
 SELECT
     subject_id,
     hadm_id,

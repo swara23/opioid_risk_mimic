@@ -2,7 +2,7 @@ SET search_path TO mimiciv_hosp;
 -- diagnoses.sql
 -- Extract ICD codes with labels
 
-CREATE TABLE diagnoses AS
+CREATE OR REPLACE TABLE diagnoses AS
 SELECT
     di.subject_id,
     di.hadm_id,

@@ -3,7 +3,7 @@ SET search_path TO mimiciv_hosp;
 -- Extract opioid-related prescriptions and pharmacy/EMAR details
 
 -- 1. Prescriptions filtered for opioids
-CREATE TABLE mimiciv_hosp.pharmacy AS
+CREATE OR REPLACE TABLE mimiciv_hosp.pharmacy AS
 SELECT
     subject_id,
     hadm_id,
@@ -19,7 +19,7 @@ SELECT
 FROM mimiciv_hosp.pharmacy;
 
 -- 2. Pharmacy table
-CREATE TABLE pharmacy AS
+CREATE OR REPLACE TABLE pharmacy AS
 SELECT
     subject_id,
     hadm_id,
@@ -35,7 +35,7 @@ SELECT
 FROM pharmacy;
 
 -- 3. EMAR (administration events)
-CREATE TABLE emar AS
+CREATE OR REPLACE TABLE emar AS
 SELECT
     subject_id,
     hadm_id,
@@ -46,7 +46,7 @@ SELECT
 FROM emar;
 
 -- 4. EMAR detail (dose-level info)
-CREATE TABLE emar_detail AS
+CREATE OR REPLACE TABLE emar_detail AS
 SELECT
     subject_id,
     emar_id,

@@ -2,7 +2,7 @@ SET search_path TO mimiciv_hosp;
 -- transfers.sql
 -- ICU and transfer events
 
-CREATE TABLE transfers AS
+CREATE OR REPLACE TABLE transfers AS
 SELECT
     subject_id,
     hadm_id,

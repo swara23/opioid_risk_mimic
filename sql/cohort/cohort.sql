@@ -2,7 +2,7 @@ SET search_path TO mimiciv_hosp;
 -- cohort.sql
 -- Build patient-admission cohort with demographics
 
-CREATE TABLE cohort AS
+CREATE OR REPLACE TABLE cohort AS
 SELECT
     a.subject_id,
     a.hadm_id,

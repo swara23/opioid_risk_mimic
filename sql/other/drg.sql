@@ -2,7 +2,7 @@ SET search_path TO mimiciv_hosp;
 -- drg.sql
 -- Diagnosis-related group info
 
-CREATE TABLE drg AS
+CREATE OR REPLACE TABLE drg AS
 SELECT
     subject_id,
     hadm_id,
