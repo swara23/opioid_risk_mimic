@@ -1,0 +1,18 @@
+name: project-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - jupyterlab
+  - ipykernel
+  - sqlalchemy
+  - psycopg2
+  - sqlite
+  - pip
+  - pip:
+      - pyarrow
+      - duckdb
