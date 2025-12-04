@@ -1,3 +1,4 @@
+SET search_path TO mimiciv_hosp;
 -- cohort.sql
 -- Build patient-admission cohort with demographics
 
@@ -21,6 +22,6 @@ SELECT
     a.marital_status,
     a.race,
     a.hospital_expire_flag
-FROM mimiciv_hosp.admissions a
-INNER JOIN mimiciv_hosp.patients p
+FROM admissions a
+INNER JOIN patients p
     ON a.subject_id = p.subject_id;

@@ -1,10 +1,11 @@
+SET search_path TO mimiciv_hosp;
 -- medications.sql
 -- Extract opioid-related prescriptions and pharmacy/EMAR details
 
 -- 1. Prescriptions filtered for opioids
 CREATE TABLE opioid_prescriptions AS
 SELECT *
-FROM mimiciv_hosp.prescriptions
+FROM prescriptions
 WHERE LOWER(drug) LIKE '%morphine%'
    OR LOWER(drug) LIKE '%oxycodone%'
    OR LOWER(drug) LIKE '%hydrocodone%'
@@ -30,7 +31,7 @@ SELECT
     doses_per_24_hrs,
     duration,
     fill_quantity
-FROM mimiciv_hosp.pharmacy;
+FROM pharmacy;
 
 -- 3. EMAR (administration events)
 CREATE TABLE emar AS
@@ -41,7 +42,7 @@ SELECT
     charttime,
     medication,
     event_txt
-FROM mimiciv_hosp.emar;
+FROM emar;
 
 -- 4. EMAR detail (dose-level info)
 CREATE TABLE emar_detail AS
@@ -52,4 +53,4 @@ SELECT
     dose_given_unit,
     route,
     infusion_rate
-FROM mimiciv_hosp.emar_detail;
+FROM emar_detail;

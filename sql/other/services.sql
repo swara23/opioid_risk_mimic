@@ -1,3 +1,4 @@
+SET search_path TO mimiciv_hosp;
 -- services.sql
 -- Service changes during stay
 
@@ -8,4 +9,4 @@ SELECT
     transfertime,
     prev_service,
     curr_service
-FROM mimiciv_hosp.services;
+FROM services;

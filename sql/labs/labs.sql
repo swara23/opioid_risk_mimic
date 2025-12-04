@@ -1,3 +1,4 @@
+SET search_path TO mimiciv_hosp;
 -- labs.sql
 -- Extract lab events
 
@@ -10,5 +11,5 @@ SELECT
     valuenum,
     valueuom,
     flag
-FROM mimiciv_hosp.labevents
+FROM labevents
 WHERE valuenum IS NOT NULL;

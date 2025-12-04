@@ -1,3 +1,4 @@
+SET search_path TO mimiciv_hosp;
 -- drg.sql
 -- Diagnosis-related group info
 
@@ -10,4 +11,4 @@ SELECT
     description,
     drg_severity,
     drg_mortality
-FROM mimiciv_hosp.drgcodes;
+FROM drgcodes;

@@ -1,3 +1,4 @@
+SET search_path TO mimiciv_hosp;
 -- transfers.sql
 -- ICU and transfer events
 
@@ -10,4 +11,4 @@ SELECT
     careunit,
     intime,
     outtime
-FROM mimiciv_hosp.transfers;
+FROM transfers;
